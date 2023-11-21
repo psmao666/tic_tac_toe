@@ -6,15 +6,20 @@ The connection will be established via TCP/IP.
 
 ## How to set up
 
-My mingw64 compiler doesn't have an appropriate #include<thread> implementation, hence
-I installed the relevant head filers and that's why I have #include<thread.h>
+First, to use CMake, run
+```
+mkdir build
+cd build
+cmake ..
+make
+```
 
-Under Windows11 system, compile server code with 
+To run server, type
 ```
-g++ -std=c++2a -o server server.cpp -lwsock32 -pthread
+./TicTacToe_Server
 ```
 
-Similarly, compile client code with
+To run client, type
 ```
-g++ -std=c++2a -o client client.cpp -lwsock32 -pthread
+./TicTacToe_Client
 ```
